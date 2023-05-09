@@ -7,25 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A2D2AA3E493ADE6CA226434 /* Pods_SolutisSW2023.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A3207C1EAB63DA5C8CCC04 /* Pods_SolutisSW2023.framework */; };
 		FC81F8D62A02C6BB004DB8BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81F8D52A02C6BB004DB8BF /* AppDelegate.swift */; };
-		FC81F8D82A02C6BB004DB8BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81F8D72A02C6BB004DB8BF /* SceneDelegate.swift */; };
-		FC81F8DA2A02C6BB004DB8BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81F8D92A02C6BB004DB8BF /* ViewController.swift */; };
-		FC81F8DD2A02C6BB004DB8BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC81F8DB2A02C6BB004DB8BF /* Main.storyboard */; };
 		FC81F8E02A02C6BB004DB8BF /* SolutisSW2023.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC81F8DE2A02C6BB004DB8BF /* SolutisSW2023.xcdatamodeld */; };
 		FC81F8E22A02C6BC004DB8BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC81F8E12A02C6BC004DB8BF /* Assets.xcassets */; };
 		FC81F8E52A02C6BC004DB8BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC81F8E32A02C6BC004DB8BF /* LaunchScreen.storyboard */; };
+		FC81F8FF2A02D2C2004DB8BF /* PlanetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81F8F92A02D2C2004DB8BF /* PlanetPresenter.swift */; };
+		FC81F9002A02D2C2004DB8BF /* PlanetWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81F8FA2A02D2C2004DB8BF /* PlanetWorker.swift */; };
+		FC81F9012A02D2C2004DB8BF /* PlanetRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81F8FB2A02D2C2004DB8BF /* PlanetRouter.swift */; };
+		FC81F9022A02D2C2004DB8BF /* PlanetModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81F8FC2A02D2C2004DB8BF /* PlanetModels.swift */; };
+		FC81F9032A02D2C2004DB8BF /* PlanetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81F8FD2A02D2C2004DB8BF /* PlanetViewController.swift */; };
+		FC81F9042A02D2C2004DB8BF /* PlanetInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81F8FE2A02D2C2004DB8BF /* PlanetInteractor.swift */; };
+		FC81F90D2A02E18A004DB8BF /* ApiWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81F90C2A02E18A004DB8BF /* ApiWorker.swift */; };
+		FC81F90F2A02E356004DB8BF /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81F90E2A02E356004DB8BF /* Configuration.swift */; };
+		FC81F9162A02EE52004DB8BF /* PlanetDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81F9102A02EE52004DB8BF /* PlanetDetailPresenter.swift */; };
+		FC81F9172A02EE52004DB8BF /* PlanetDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81F9112A02EE52004DB8BF /* PlanetDetailWorker.swift */; };
+		FC81F9182A02EE52004DB8BF /* PlanetDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81F9122A02EE52004DB8BF /* PlanetDetailRouter.swift */; };
+		FC81F9192A02EE52004DB8BF /* PlanetDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81F9132A02EE52004DB8BF /* PlanetDetailModels.swift */; };
+		FC81F91A2A02EE52004DB8BF /* PlanetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81F9142A02EE52004DB8BF /* PlanetDetailViewController.swift */; };
+		FC81F91B2A02EE52004DB8BF /* PlanetDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81F9152A02EE52004DB8BF /* PlanetDetailInteractor.swift */; };
+		FC81F9202A02FC1F004DB8BF /* ApiConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81F91F2A02FC1F004DB8BF /* ApiConstant.swift */; };
+		FC81F9222A03198B004DB8BF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81F9212A03198B004DB8BF /* BaseViewController.swift */; };
+		FC81F9252A0329A6004DB8BF /* PlanetNetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81F9242A0329A6004DB8BF /* PlanetNetworkConfiguration.swift */; };
+		FC81F9272A032E43004DB8BF /* Planet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC81F9262A032E43004DB8BF /* Planet.storyboard */; };
+		FC81F9292A035AA7004DB8BF /* PlanetDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC81F9282A035AA7004DB8BF /* PlanetDetail.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F3B28841340BE26E32EDE71 /* Pods-SolutisSW2023.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SolutisSW2023.release.xcconfig"; path = "Target Support Files/Pods-SolutisSW2023/Pods-SolutisSW2023.release.xcconfig"; sourceTree = "<group>"; };
+		77A3207C1EAB63DA5C8CCC04 /* Pods_SolutisSW2023.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SolutisSW2023.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2B6264C8C81C9EC35E6F444 /* Pods-SolutisSW2023.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SolutisSW2023.debug.xcconfig"; path = "Target Support Files/Pods-SolutisSW2023/Pods-SolutisSW2023.debug.xcconfig"; sourceTree = "<group>"; };
 		FC81F8D22A02C6BB004DB8BF /* SolutisSW2023.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SolutisSW2023.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC81F8D52A02C6BB004DB8BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FC81F8D72A02C6BB004DB8BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FC81F8D92A02C6BB004DB8BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FC81F8DC2A02C6BB004DB8BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC81F8DF2A02C6BB004DB8BF /* SolutisSW2023.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SolutisSW2023.xcdatamodel; sourceTree = "<group>"; };
 		FC81F8E12A02C6BC004DB8BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC81F8E42A02C6BC004DB8BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC81F8E62A02C6BC004DB8BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC81F8F92A02D2C2004DB8BF /* PlanetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetPresenter.swift; sourceTree = "<group>"; };
+		FC81F8FA2A02D2C2004DB8BF /* PlanetWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetWorker.swift; sourceTree = "<group>"; };
+		FC81F8FB2A02D2C2004DB8BF /* PlanetRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetRouter.swift; sourceTree = "<group>"; };
+		FC81F8FC2A02D2C2004DB8BF /* PlanetModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetModels.swift; sourceTree = "<group>"; };
+		FC81F8FD2A02D2C2004DB8BF /* PlanetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetViewController.swift; sourceTree = "<group>"; };
+		FC81F8FE2A02D2C2004DB8BF /* PlanetInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetInteractor.swift; sourceTree = "<group>"; };
+		FC81F90C2A02E18A004DB8BF /* ApiWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiWorker.swift; sourceTree = "<group>"; };
+		FC81F90E2A02E356004DB8BF /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		FC81F9102A02EE52004DB8BF /* PlanetDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetailPresenter.swift; sourceTree = "<group>"; };
+		FC81F9112A02EE52004DB8BF /* PlanetDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetailWorker.swift; sourceTree = "<group>"; };
+		FC81F9122A02EE52004DB8BF /* PlanetDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetailRouter.swift; sourceTree = "<group>"; };
+		FC81F9132A02EE52004DB8BF /* PlanetDetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetailModels.swift; sourceTree = "<group>"; };
+		FC81F9142A02EE52004DB8BF /* PlanetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetailViewController.swift; sourceTree = "<group>"; };
+		FC81F9152A02EE52004DB8BF /* PlanetDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetailInteractor.swift; sourceTree = "<group>"; };
+		FC81F91F2A02FC1F004DB8BF /* ApiConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstant.swift; sourceTree = "<group>"; };
+		FC81F9212A03198B004DB8BF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		FC81F9242A0329A6004DB8BF /* PlanetNetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetNetworkConfiguration.swift; sourceTree = "<group>"; };
+		FC81F9262A032E43004DB8BF /* Planet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Planet.storyboard; sourceTree = "<group>"; };
+		FC81F9282A035AA7004DB8BF /* PlanetDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlanetDetail.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +69,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A2D2AA3E493ADE6CA226434 /* Pods_SolutisSW2023.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC3716FB0192383EA8AB6063 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2B6264C8C81C9EC35E6F444 /* Pods-SolutisSW2023.debug.xcconfig */,
+				4F3B28841340BE26E32EDE71 /* Pods-SolutisSW2023.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CDE4E4AC13962EFDD61A7E2C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77A3207C1EAB63DA5C8CCC04 /* Pods_SolutisSW2023.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FC81F8C92A02C6BB004DB8BF = {
 			isa = PBXGroup;
 			children = (
 				FC81F8D42A02C6BB004DB8BF /* SolutisSW2023 */,
 				FC81F8D32A02C6BB004DB8BF /* Products */,
+				BC3716FB0192383EA8AB6063 /* Pods */,
+				CDE4E4AC13962EFDD61A7E2C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +114,80 @@
 		FC81F8D42A02C6BB004DB8BF /* SolutisSW2023 */ = {
 			isa = PBXGroup;
 			children = (
+				FC81F9232A03297E004DB8BF /* Network */,
+				FC81F91E2A02FC06004DB8BF /* Base */,
+				FC81F90B2A02E177004DB8BF /* Workers */,
+				FC81F90A2A02DC5D004DB8BF /* Scenes */,
 				FC81F8D52A02C6BB004DB8BF /* AppDelegate.swift */,
-				FC81F8D72A02C6BB004DB8BF /* SceneDelegate.swift */,
-				FC81F8D92A02C6BB004DB8BF /* ViewController.swift */,
-				FC81F8DB2A02C6BB004DB8BF /* Main.storyboard */,
 				FC81F8E12A02C6BC004DB8BF /* Assets.xcassets */,
 				FC81F8E32A02C6BC004DB8BF /* LaunchScreen.storyboard */,
 				FC81F8E62A02C6BC004DB8BF /* Info.plist */,
 				FC81F8DE2A02C6BB004DB8BF /* SolutisSW2023.xcdatamodeld */,
 			);
 			path = SolutisSW2023;
+			sourceTree = "<group>";
+		};
+		FC81F8F82A02D2AD004DB8BF /* Planet */ = {
+			isa = PBXGroup;
+			children = (
+				FC81F8F92A02D2C2004DB8BF /* PlanetPresenter.swift */,
+				FC81F8FA2A02D2C2004DB8BF /* PlanetWorker.swift */,
+				FC81F8FB2A02D2C2004DB8BF /* PlanetRouter.swift */,
+				FC81F8FC2A02D2C2004DB8BF /* PlanetModels.swift */,
+				FC81F8FD2A02D2C2004DB8BF /* PlanetViewController.swift */,
+				FC81F8FE2A02D2C2004DB8BF /* PlanetInteractor.swift */,
+				FC81F9262A032E43004DB8BF /* Planet.storyboard */,
+			);
+			path = Planet;
+			sourceTree = "<group>";
+		};
+		FC81F90A2A02DC5D004DB8BF /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FC81F91C2A02EE5A004DB8BF /* PlanetDetail */,
+				FC81F8F82A02D2AD004DB8BF /* Planet */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FC81F90B2A02E177004DB8BF /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				FC81F90C2A02E18A004DB8BF /* ApiWorker.swift */,
+				FC81F90E2A02E356004DB8BF /* Configuration.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		FC81F91C2A02EE5A004DB8BF /* PlanetDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FC81F9102A02EE52004DB8BF /* PlanetDetailPresenter.swift */,
+				FC81F9112A02EE52004DB8BF /* PlanetDetailWorker.swift */,
+				FC81F9122A02EE52004DB8BF /* PlanetDetailRouter.swift */,
+				FC81F9132A02EE52004DB8BF /* PlanetDetailModels.swift */,
+				FC81F9142A02EE52004DB8BF /* PlanetDetailViewController.swift */,
+				FC81F9152A02EE52004DB8BF /* PlanetDetailInteractor.swift */,
+				FC81F9282A035AA7004DB8BF /* PlanetDetail.storyboard */,
+			);
+			path = PlanetDetail;
+			sourceTree = "<group>";
+		};
+		FC81F91E2A02FC06004DB8BF /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FC81F91F2A02FC1F004DB8BF /* ApiConstant.swift */,
+				FC81F9212A03198B004DB8BF /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		FC81F9232A03297E004DB8BF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FC81F9242A0329A6004DB8BF /* PlanetNetworkConfiguration.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +197,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC81F8E92A02C6BC004DB8BF /* Build configuration list for PBXNativeTarget "SolutisSW2023" */;
 			buildPhases = (
+				14B51628A457604AB9C7777F /* [CP] Check Pods Manifest.lock */,
 				FC81F8CE2A02C6BB004DB8BF /* Sources */,
 				FC81F8CF2A02C6BB004DB8BF /* Frameworks */,
 				FC81F8D02A02C6BB004DB8BF /* Resources */,
@@ -128,37 +249,70 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC81F9272A032E43004DB8BF /* Planet.storyboard in Resources */,
 				FC81F8E52A02C6BC004DB8BF /* LaunchScreen.storyboard in Resources */,
+				FC81F9292A035AA7004DB8BF /* PlanetDetail.storyboard in Resources */,
 				FC81F8E22A02C6BC004DB8BF /* Assets.xcassets in Resources */,
-				FC81F8DD2A02C6BB004DB8BF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14B51628A457604AB9C7777F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SolutisSW2023-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FC81F8CE2A02C6BB004DB8BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC81F8DA2A02C6BB004DB8BF /* ViewController.swift in Sources */,
+				FC81F9172A02EE52004DB8BF /* PlanetDetailWorker.swift in Sources */,
+				FC81F9182A02EE52004DB8BF /* PlanetDetailRouter.swift in Sources */,
+				FC81F9002A02D2C2004DB8BF /* PlanetWorker.swift in Sources */,
+				FC81F9032A02D2C2004DB8BF /* PlanetViewController.swift in Sources */,
+				FC81F9222A03198B004DB8BF /* BaseViewController.swift in Sources */,
+				FC81F8FF2A02D2C2004DB8BF /* PlanetPresenter.swift in Sources */,
+				FC81F91A2A02EE52004DB8BF /* PlanetDetailViewController.swift in Sources */,
 				FC81F8D62A02C6BB004DB8BF /* AppDelegate.swift in Sources */,
 				FC81F8E02A02C6BB004DB8BF /* SolutisSW2023.xcdatamodeld in Sources */,
-				FC81F8D82A02C6BB004DB8BF /* SceneDelegate.swift in Sources */,
+				FC81F9022A02D2C2004DB8BF /* PlanetModels.swift in Sources */,
+				FC81F9252A0329A6004DB8BF /* PlanetNetworkConfiguration.swift in Sources */,
+				FC81F90F2A02E356004DB8BF /* Configuration.swift in Sources */,
+				FC81F9012A02D2C2004DB8BF /* PlanetRouter.swift in Sources */,
+				FC81F9042A02D2C2004DB8BF /* PlanetInteractor.swift in Sources */,
+				FC81F91B2A02EE52004DB8BF /* PlanetDetailInteractor.swift in Sources */,
+				FC81F90D2A02E18A004DB8BF /* ApiWorker.swift in Sources */,
+				FC81F9202A02FC1F004DB8BF /* ApiConstant.swift in Sources */,
+				FC81F9192A02EE52004DB8BF /* PlanetDetailModels.swift in Sources */,
+				FC81F9162A02EE52004DB8BF /* PlanetDetailPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FC81F8DB2A02C6BB004DB8BF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FC81F8DC2A02C6BB004DB8BF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FC81F8E32A02C6BC004DB8BF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -220,7 +374,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -274,7 +428,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -286,6 +440,7 @@
 		};
 		FC81F8EA2A02C6BC004DB8BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2B6264C8C81C9EC35E6F444 /* Pods-SolutisSW2023.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -293,11 +448,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SolutisSW2023/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SolutisSW;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,6 +470,7 @@
 		};
 		FC81F8EB2A02C6BC004DB8BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F3B28841340BE26E32EDE71 /* Pods-SolutisSW2023.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -320,11 +478,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SolutisSW2023/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SolutisSW;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
