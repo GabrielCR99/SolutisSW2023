@@ -23,18 +23,17 @@ protocol PlanetDataStore {
 
 final class PlanetInteractor: PlanetDataStore {
     // MARK: - Public Variables
-    
+
     var presenter: PlanetPresentationLogic?
     var worker: PlanetWorker?
     var planetsResponse: Planet.FetchPlanets.Response?
-    
+
     // MARK: - Private variables
-    
+
     private let waitingToStartGroup = DispatchGroup()
-    
-    
+
     // MARK: Methods
-    
+
     func fetchPlanets() {
         waitingToStartGroup.enter()
         worker = PlanetWorker()
@@ -42,7 +41,7 @@ final class PlanetInteractor: PlanetDataStore {
             defer {
                 self?.waitingToStartGroup.leave()
             }
-            
+
             switch result {
             case .success(let success):
                 self?.planetsResponse = Planet.FetchPlanets.Response(planets: success)
@@ -57,24 +56,24 @@ extension PlanetInteractor: PlanetBusinessLogic {
     func viewDidLoad() {
         presenter?.showLoading()
         fetchPlanets()
-        
+
         waitingToStartGroup.notify(queue: .main) { [weak self] in
             self?.presenter?.hideLoading()
             guard let self = self, let planets = planetsResponse else { return }
-            
+
             if let error = planets.error {
                 self.presenter?.showError(error)
             }
-            
+
             self.presenter?.presentPlanets(response: planets)
-                
+
         }
-        
+
     }
-    
+
     func reloadTableViewData() {
         guard let planets = planetsResponse else { return }
-        
+
         presenter?.presentPlanets(response: planets)
     }
 }

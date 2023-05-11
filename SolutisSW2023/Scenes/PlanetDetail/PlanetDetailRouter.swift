@@ -23,11 +23,12 @@ protocol PlanetDetailDataPassing {
 final class PlanetDetailRouter: NSObject, PlanetDetailRoutingLogic, PlanetDetailDataPassing {
   weak var viewController: PlanetDetailViewController?
   var dataStore: PlanetDetailDataStore?
-  
+
   // MARK: Routing
-  
+
   func goBackToPlanets() {
-      guard let destinationVC = viewController?.navigationController?.viewControllers.first(where: { $0 is PlanetViewController }) as? PlanetViewController else { return }
+      guard let destinationVC = viewController?.navigationController?.viewControllers.first(
+        where: { $0 is PlanetViewController }) as? PlanetViewController else { return }
       var destinationDS = destinationVC.router!.dataStore!
       passDataToPlanet(source: dataStore!, destination: &destinationDS)
 //      destinationVC.reloadTableViewData(with:)
@@ -35,15 +36,16 @@ final class PlanetDetailRouter: NSObject, PlanetDetailRoutingLogic, PlanetDetail
   }
 
   // MARK: Navigation
-  
+
     func navigateBack(source: PlanetDetailViewController) {
       source.navigationController?.popViewController(animated: true)
   }
-  
+
   // MARK: Passing data
-  
+
   func passDataToPlanet(source: PlanetDetailDataStore, destination: inout PlanetDataStore) {
-      guard let _ = destination.planetsResponse?.planets?.firstIndex(where: { $0.url == source.planet.url}) else { return }
+      guard let _ = destination.planetsResponse?.planets?.firstIndex(
+        where: { $0.url == source.planet.url}) else { return }
 //      destination.planetsResponse?.planets?[firstIndex].favorite = source.planet.favorite
   }
 }

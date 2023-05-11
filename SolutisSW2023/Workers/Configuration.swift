@@ -21,7 +21,7 @@ protocol Configuration {
     var path: String { get }
     var method: HTTPMethod { get }
     var task: Task { get }
-    
+
 }
 
 struct ServiceError: Error {
@@ -29,30 +29,30 @@ struct ServiceError: Error {
     var message: String {
         return issueCode.message
     }
-    
+
     static var urlError: ServiceError {
         return ServiceError(issueCode: IssueCode.customMessage(message: "Wrong URL"))
     }
-    
+
     static var notFoundData: ServiceError {
         return ServiceError(issueCode: IssueCode.customMessage(message: "Data not found"))
     }
-    
+
     static var parseError: ServiceError {
         return ServiceError(issueCode: IssueCode.customMessage(message: "Parse Model Error"))
     }
-    
+
     static var somethingWrong: ServiceError {
         return ServiceError(issueCode: IssueCode.customMessage(message: "Something went wrong!"))
     }
-    
+
     enum IssueCode {
         case UNAUTHORIZED
         case sessionExpire
         case sessionNotFound
         case timeOut
         case customMessage(message: String)
-        
+
         static func initValue(value: String) -> IssueCode {
             switch value.uppercased() {
             case "UNAUTHORIZED":
@@ -70,7 +70,7 @@ struct ServiceError: Error {
                 return .customMessage(message: value)
             }
         }
-        
+
         var message: String {
             switch self {
             case .UNAUTHORIZED:

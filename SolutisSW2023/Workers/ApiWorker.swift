@@ -12,43 +12,42 @@
 
 import Foundation
 
-class ApiWorker
-{
-    func request<T: Decodable>(configuration: Configuration, response: T.Type, completion: @escaping (Result<T, ServiceError>) -> Void)
-    {
+class ApiWorker {
+    func request<T: Decodable>(configuration: Configuration, response: T.Type,
+                               completion: @escaping (Result<T, ServiceError>) -> Void) {
         let url = configuration.baseURL + configuration.path
-        
+
         guard let url = URL(string: url) else {
-            
+
             completion(.failure(.urlError))
-            
+
             return
         }
-        
+
         let request = generateRequest(url: url, method: configuration.method.rawValue)
-        
-        let dataTask = URLSession.shared.dataTask(with: request as URLRequest) { data, response, error in
-            
+
+        URLSession.shared.dataTask(with: request as URLRequest) { data, response, error in
+
             DispatchQueue.main.async {
                 guard error == nil else {
                     let errorMessage = error?.localizedDescription ?? "Server Error"
                     completion(.failure(.init(issueCode: .initValue(value: errorMessage))))
-                    
+
                     return
                 }
-                
+
                 guard let data = data, let httpResponse = response as? HTTPURLResponse else {
                     completion(.failure(ServiceError.notFoundData))
-                    
+
                     return
                 }
-                
+
                 guard self.isSuccess(httpResponse.statusCode) else {
                     completion(.failure(.notFoundData))
-                    
+
                     return
                 }
-                
+
                 do {
                     let decoder = JSONDecoder()
                     let responseObj = try decoder.decode(T.self, from: data)
@@ -60,10 +59,8 @@ class ApiWorker
                 }
 
             }
-            
-        }
-        
-        dataTask.resume()
+
+        }.resume()
     }
 }
 
@@ -74,10 +71,10 @@ private extension ApiWorker {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.httpBody = nil
-                
+
         return request
     }
-    
+
     func generateParams(task: Task) -> ([String: Any]) {
         switch task {
         case .requestPlain:
@@ -86,7 +83,7 @@ private extension ApiWorker {
             return (parameters)
         }
     }
-    
+
     func isSuccess(_ code: Int) -> Bool {
         switch code {
         case 200...304:

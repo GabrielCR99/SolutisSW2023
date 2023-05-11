@@ -18,32 +18,32 @@ protocol PlanetDisplayLogic: BaseViewControllerProtocol {
 
 final class PlanetViewController: BaseViewController {
     // MARK: - IBOutlets
-    
+
     @IBOutlet weak var tableView: UITableView!
-    
+
     // MARK: - Public Variables
-    
+
     var interactor: PlanetBusinessLogic?
     var router: (PlanetRoutingLogic & PlanetDataPassing)?
-    
+
     // MARK: - Private Variables
-    
+
     private lazy var planets: [PlanetViewModel] = []
-    
+
     // MARK: Object lifecycle
-    
+
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
-    
+
     // MARK: Setup
-    
+
     private func setup() {
         let viewController = self
         let interactor = PlanetInteractor()
@@ -56,17 +56,17 @@ final class PlanetViewController: BaseViewController {
         router.viewController = viewController
         router.dataStore = interactor
     }
-    
+
     // MARK: View lifecycle
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         interactor?.viewDidLoad()
     }
-    
+
     // MARK: Methods
-    
+
     private func setupUI() {
         self.title = "Star Wars Planets"
         tableView?.dataSource = self
@@ -85,14 +85,14 @@ extension PlanetViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return planets.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
         let planet = planets[indexPath.row]
         var content = cell.defaultContentConfiguration()
         content.text = planet.name
         cell.contentConfiguration = content
-        
+
         return cell
     }
 }

@@ -22,20 +22,19 @@ protocol PlanetDetailDataStore {
 }
 
 final class PlanetDetailInteractor: PlanetDetailBusinessLogic, PlanetDetailDataStore {
-    
+
     // MARK: - Attributes
 
     var presenter: PlanetDetailPresentationLogic?
     var worker: PlanetDetailWorker?
     var planet: PlanetModel!
-    
-    
+
     // MARK: - Methods
-    
+
     func showPlanetDetail() {
         presenter?.presentPlanetDetail(planet)
     }
-    
+
     func formatDate(_ date: String) -> String {
         return presenter?.formatDate(date) ?? ""
     }

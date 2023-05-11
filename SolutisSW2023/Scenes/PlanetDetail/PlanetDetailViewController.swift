@@ -18,14 +18,14 @@ protocol PlanetDetailDisplayLogic: AnyObject {
 }
 
 final class PlanetDetailViewController: UIViewController, PlanetDetailDisplayLogic {
-    
+
     // MARK: - IBActions
-    
+
     @IBAction func favoriteButton(_ sender: UIBarButtonItem) {
     }
-    
+
     // MARK: - IBOutlets
-    
+
     @IBOutlet weak var rotationPeriod: UILabel!
     @IBOutlet weak var orbitalPeriod: UILabel!
     @IBOutlet weak var diameter: UILabel!
@@ -37,28 +37,27 @@ final class PlanetDetailViewController: UIViewController, PlanetDetailDisplayLog
     @IBOutlet weak var films: UILabel!
     @IBOutlet weak var created: UILabel!
     @IBOutlet weak var updated: UILabel!
-    
+
     // MARK: - Public Variables
-    
+
     var interactor: PlanetDetailBusinessLogic?
     var router: (NSObjectProtocol & PlanetDetailRoutingLogic & PlanetDetailDataPassing)?
-    
+
     // MARK: Object lifecycle
-    
+
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
-    
+
     // MARK: Setup
-    
-    private func setup()
-    {
+
+    private func setup() {
         let viewController = self
         let interactor = PlanetDetailInteractor()
         let presenter = PlanetDetailPresenter()
@@ -70,20 +69,20 @@ final class PlanetDetailViewController: UIViewController, PlanetDetailDisplayLog
         router.viewController = viewController
         router.dataStore = interactor
     }
-    
+
     // MARK: View lifecycle
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         interactor?.showPlanetDetail()
     }
-    
+
     func updateIsFavoritePlanet() {
         router?.goBackToPlanets()
     }
-    
+
     func updateUI(with viewModel: PlanetDetail.FetchPlanetDetail.ViewModel) {
-        
+
         self.title = viewModel.name
         rotationPeriod.text = "Período de rotação: \(viewModel.rotationPeriod)"
         orbitalPeriod.text = "Período de orbital: \(viewModel.orbitalPeriod)"

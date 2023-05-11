@@ -12,16 +12,13 @@
 
 import UIKit
 
-enum PlanetDetail
-{
+enum PlanetDetail {
     // MARK: Use cases
-    
-    enum FetchPlanetDetail
-    {
+
+    enum FetchPlanetDetail {
         struct Request {}
         struct Response {}
-        struct ViewModel
-        {
+        struct ViewModel {
             let name: String
             let rotationPeriod: String
             let orbitalPeriod: String
@@ -31,8 +28,8 @@ enum PlanetDetail
             let terrain: String
             let surfaceWater: String
             let population: String
-            let residents: Array<String>
-            let films: Array<String>
+            let residents: [String]
+            let films: [String]
             let created: String
             let edited: String
             let url: String

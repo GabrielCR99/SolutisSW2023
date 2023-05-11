@@ -15,18 +15,18 @@ import CoreData
 
 enum Planet {
     // MARK: Use cases
-    
+
     enum FetchPlanets {
         struct Request {}
         struct Response {
             let planets: [PlanetModel]?
             let error: ServiceError?
-            
+
             init(planets: [PlanetModel]? = nil, error: ServiceError? = nil) {
                 self.planets = planets
                 self.error = error
             }
-            
+
         }
         struct ViewModel {
             let planets: [PlanetViewModel]
@@ -46,12 +46,12 @@ struct PlanetModel: Decodable {
     let terrain: String
     let surfaceWater: String
     let population: String
-    let residents: Array<String>
-    let films: Array<String>
+    let residents: [String]
+    let films: [String]
     let created: String
     let edited: String
     let url: String
-    
+
     enum CodingKeys: String, CodingKey {
         case name, diameter, climate, gravity, terrain, population, residents, films, created, edited, url
         case rotationPeriod = "rotation_period"
@@ -80,7 +80,7 @@ struct PlanetViewModel {
 }
 
 // These methods are from CoreData, as seen in Alura's course
-//extension PlanetViewModel {
+// extension PlanetViewModel {
 //    func save(_ context: NSManagedObjectContext) {
 //        do {
 //            try context.save()
@@ -100,4 +100,4 @@ struct PlanetViewModel {
 //            debugPrint(error)
 //        }
 //    }
-//}
+// }

@@ -13,21 +13,21 @@ enum PlanetNetworkConfiguration {
 
 extension PlanetNetworkConfiguration: Configuration {
     var baseURL: String { return ApiConstant.baseUrl }
-    
+
     var path: String {
         switch self {
         case .fetchPlanets:
             return "/planets"
         }
     }
-    
+
     var method: HTTPMethod {
         switch self {
         case .fetchPlanets:
             return .get
         }
     }
-    
+
     var task: Task {
         switch self {
         case .fetchPlanets:

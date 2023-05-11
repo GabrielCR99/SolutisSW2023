@@ -15,7 +15,8 @@ import UIKit
 // Faz requisições de rede, recupera algo da base de dados do CoreData
 final class PlanetWorker: ApiWorker {
   func getPlanetsOrError(completion: @escaping (Result<[PlanetModel], ServiceError>) -> Void) {
-      request(configuration: PlanetNetworkConfiguration.fetchPlanets, response: DefaultResponse<[PlanetModel]>.self) { result in
+      request(configuration: PlanetNetworkConfiguration.fetchPlanets,
+              response: DefaultResponse<[PlanetModel]>.self) { result in
           switch result {
           case .success(let success):
               completion(.success(success.results))

@@ -18,15 +18,15 @@ class BaseViewController: UIViewController, BaseViewControllerProtocol {
     var rootViewController: UIViewController? {
         return UIApplication.shared.keyWindow?.rootViewController
     }
-    
+
     func showLoading(title: String = "Carregando") {
         let alert = UIAlertController(title: nil, message: title, preferredStyle: .alert)
-        
+
         let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
         loadingIndicator.hidesWhenStopped = true
         loadingIndicator.style = UIActivityIndicatorView.Style.medium
-        loadingIndicator.startAnimating();
-        
+        loadingIndicator.startAnimating()
+
         alert.view.addSubview(loadingIndicator)
         var nearestAvailablePresenter: UIViewController? {
             guard let root = rootViewController else {
@@ -40,14 +40,14 @@ class BaseViewController: UIViewController, BaseViewControllerProtocol {
                 return self // no parent found, present from self
             }
         }
-        
+
         nearestAvailablePresenter?.present(alert, animated: true, completion: nil)
     }
-    
+
     func hideLoading() {
         dismiss(animated: false)
     }
-    
+
     func showError(_ error: ServiceError) {
         debugPrint(error.message)
     }

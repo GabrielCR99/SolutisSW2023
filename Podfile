@@ -7,6 +7,6 @@ target 'SolutisSW2023' do
 
   # Pods for SolutisSW2023
   
-#  pod 'SwiftLint'
+  pod 'SwiftLint'
 
 end
