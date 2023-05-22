@@ -43,7 +43,7 @@ final class PlanetDetailViewController: UIViewController, PlanetDetailDisplayLog
     var interactor: PlanetDetailBusinessLogic?
     var router: (NSObjectProtocol & PlanetDetailRoutingLogic & PlanetDetailDataPassing)?
 
-    // MARK: Object lifecycle
+    // MARK: - Object lifecycle
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -55,7 +55,7 @@ final class PlanetDetailViewController: UIViewController, PlanetDetailDisplayLog
         setup()
     }
 
-    // MARK: Setup
+    // MARK: - Setup
 
     private func setup() {
         let viewController = self
@@ -70,7 +70,7 @@ final class PlanetDetailViewController: UIViewController, PlanetDetailDisplayLog
         router.dataStore = interactor
     }
 
-    // MARK: View lifecycle
+    // MARK: - View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()

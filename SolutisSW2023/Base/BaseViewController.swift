@@ -33,11 +33,11 @@ class BaseViewController: UIViewController, BaseViewControllerProtocol {
                 return nil
             }
             if root.presentedViewController == nil {
-                return root // the root is not presenting anything, use the root
+                return root
             } else if let parent = parent {
-                return parent // the root is currently presenting, find nearest parent
+                return parent
             } else {
-                return self // no parent found, present from self
+                return self
             }
         }
 
@@ -49,6 +49,7 @@ class BaseViewController: UIViewController, BaseViewControllerProtocol {
     }
 
     func showError(_ error: ServiceError) {
-        debugPrint(error.message)
+        let alert = UIAlertController(title: nil, message: title, preferredStyle: .alert)
+        // TODO: Show alert controller when an error occurs
     }
 }

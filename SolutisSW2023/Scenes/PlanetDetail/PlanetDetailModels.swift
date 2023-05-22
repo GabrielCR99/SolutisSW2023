@@ -16,8 +16,6 @@ enum PlanetDetail {
     // MARK: Use cases
 
     enum FetchPlanetDetail {
-        struct Request {}
-        struct Response {}
         struct ViewModel {
             let name: String
             let rotationPeriod: String

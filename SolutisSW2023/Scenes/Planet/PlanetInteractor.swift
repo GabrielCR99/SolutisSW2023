@@ -13,7 +13,7 @@
 import UIKit
 
 protocol PlanetBusinessLogic {
-    func viewDidLoad()
+    func setup()
     func reloadTableViewData()
 }
 
@@ -32,7 +32,7 @@ final class PlanetInteractor: PlanetDataStore {
 
     private let waitingToStartGroup = DispatchGroup()
 
-    // MARK: Methods
+    // MARK: - Methods
 
     func fetchPlanets() {
         waitingToStartGroup.enter()
@@ -53,13 +53,13 @@ final class PlanetInteractor: PlanetDataStore {
 }
 
 extension PlanetInteractor: PlanetBusinessLogic {
-    func viewDidLoad() {
+    func setup() {
         presenter?.showLoading()
         fetchPlanets()
 
         waitingToStartGroup.notify(queue: .main) { [weak self] in
             self?.presenter?.hideLoading()
-            guard let self = self, let planets = planetsResponse else { return }
+            guard let self = self, let planets = self.planetsResponse else { return }
 
             if let error = planets.error {
                 self.presenter?.showError(error)

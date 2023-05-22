@@ -21,7 +21,6 @@
 		FC81F90D2A02E18A004DB8BF /* ApiWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81F90C2A02E18A004DB8BF /* ApiWorker.swift */; };
 		FC81F90F2A02E356004DB8BF /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81F90E2A02E356004DB8BF /* Configuration.swift */; };
 		FC81F9162A02EE52004DB8BF /* PlanetDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81F9102A02EE52004DB8BF /* PlanetDetailPresenter.swift */; };
-		FC81F9172A02EE52004DB8BF /* PlanetDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81F9112A02EE52004DB8BF /* PlanetDetailWorker.swift */; };
 		FC81F9182A02EE52004DB8BF /* PlanetDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81F9122A02EE52004DB8BF /* PlanetDetailRouter.swift */; };
 		FC81F9192A02EE52004DB8BF /* PlanetDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81F9132A02EE52004DB8BF /* PlanetDetailModels.swift */; };
 		FC81F91A2A02EE52004DB8BF /* PlanetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC81F9142A02EE52004DB8BF /* PlanetDetailViewController.swift */; };
@@ -52,7 +51,6 @@
 		FC81F90C2A02E18A004DB8BF /* ApiWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiWorker.swift; sourceTree = "<group>"; };
 		FC81F90E2A02E356004DB8BF /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		FC81F9102A02EE52004DB8BF /* PlanetDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetailPresenter.swift; sourceTree = "<group>"; };
-		FC81F9112A02EE52004DB8BF /* PlanetDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetailWorker.swift; sourceTree = "<group>"; };
 		FC81F9122A02EE52004DB8BF /* PlanetDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetailRouter.swift; sourceTree = "<group>"; };
 		FC81F9132A02EE52004DB8BF /* PlanetDetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetailModels.swift; sourceTree = "<group>"; };
 		FC81F9142A02EE52004DB8BF /* PlanetDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetDetailViewController.swift; sourceTree = "<group>"; };
@@ -163,7 +161,6 @@
 			isa = PBXGroup;
 			children = (
 				FC81F9102A02EE52004DB8BF /* PlanetDetailPresenter.swift */,
-				FC81F9112A02EE52004DB8BF /* PlanetDetailWorker.swift */,
 				FC81F9122A02EE52004DB8BF /* PlanetDetailRouter.swift */,
 				FC81F9132A02EE52004DB8BF /* PlanetDetailModels.swift */,
 				FC81F9142A02EE52004DB8BF /* PlanetDetailViewController.swift */,
@@ -307,7 +304,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC81F9172A02EE52004DB8BF /* PlanetDetailWorker.swift in Sources */,
 				FC81F9182A02EE52004DB8BF /* PlanetDetailRouter.swift in Sources */,
 				FC81F9002A02D2C2004DB8BF /* PlanetWorker.swift in Sources */,
 				FC81F9032A02D2C2004DB8BF /* PlanetViewController.swift in Sources */,
@@ -481,6 +477,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.roveridev.SolutisSW2023;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -511,6 +510,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.roveridev.SolutisSW2023;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

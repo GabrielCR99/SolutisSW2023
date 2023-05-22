@@ -26,7 +26,6 @@ final class PlanetDetailInteractor: PlanetDetailBusinessLogic, PlanetDetailDataS
     // MARK: - Attributes
 
     var presenter: PlanetDetailPresentationLogic?
-    var worker: PlanetDetailWorker?
     var planet: PlanetModel!
 
     // MARK: - Methods

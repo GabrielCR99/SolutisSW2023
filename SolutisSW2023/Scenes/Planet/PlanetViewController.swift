@@ -28,9 +28,9 @@ final class PlanetViewController: BaseViewController {
 
     // MARK: - Private Variables
 
-    private lazy var planets: [PlanetViewModel] = []
+    private var planets: [PlanetViewModel] = []
 
-    // MARK: Object lifecycle
+    // MARK: - Object lifecycle
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -42,7 +42,7 @@ final class PlanetViewController: BaseViewController {
         setup()
     }
 
-    // MARK: Setup
+    // MARK: - Setup
 
     private func setup() {
         let viewController = self
@@ -57,15 +57,15 @@ final class PlanetViewController: BaseViewController {
         router.dataStore = interactor
     }
 
-    // MARK: View lifecycle
+    // MARK: - View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        interactor?.viewDidLoad()
+        interactor?.setup()
     }
 
-    // MARK: Methods
+    // MARK: - Methods
 
     private func setupUI() {
         self.title = "Star Wars Planets"
@@ -75,10 +75,12 @@ final class PlanetViewController: BaseViewController {
 }
 
 extension PlanetViewController: PlanetDisplayLogic {
+
     func reloadTableViewData(with viewModel: Planet.FetchPlanets.ViewModel) {
         self.planets = viewModel.planets
         tableView?.reloadData()
     }
+
 }
 
 extension PlanetViewController: UITableViewDataSource {

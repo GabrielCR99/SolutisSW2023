@@ -18,7 +18,6 @@ class ApiWorker {
         let url = configuration.baseURL + configuration.path
 
         guard let url = URL(string: url) else {
-
             completion(.failure(.urlError))
 
             return

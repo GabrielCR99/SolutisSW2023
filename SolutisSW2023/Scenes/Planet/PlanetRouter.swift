@@ -26,7 +26,7 @@ final class PlanetRouter: PlanetDataPassing {
 }
 
 extension PlanetRouter: PlanetRoutingLogic {
-    // MARK: Routing
+    // MARK: - Routing
 
     func goToPlanetDetailView() {
         let storyboard = UIStoryboard(name: "PlanetDetail", bundle: nil)
@@ -38,7 +38,7 @@ extension PlanetRouter: PlanetRoutingLogic {
         navigateToPlanetDetail(source: viewController!, destination: destinationVC)
     }
 
-    // MARK: Navigation
+    // MARK: - Navigation
 
     func navigateToPlanetDetail(source: PlanetViewController, destination: PlanetDetailViewController) {
         DispatchQueue.main.async { [weak source] in
@@ -46,7 +46,7 @@ extension PlanetRouter: PlanetRoutingLogic {
         }
     }
 
-    // MARK: Passing data
+    // MARK: - Passing data
 
     func passDataToPlanetDetail(source: PlanetDataStore, destination: inout PlanetDetailDataStore) {
         guard let selectedRow = viewController?.tableView.indexPathForSelectedRow?.row,

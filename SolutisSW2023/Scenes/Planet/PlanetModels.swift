@@ -14,10 +14,9 @@ import UIKit
 import CoreData
 
 enum Planet {
-    // MARK: Use cases
+    // MARK: - Use cases
 
     enum FetchPlanets {
-        struct Request {}
         struct Response {
             let planets: [PlanetModel]?
             let error: ServiceError?

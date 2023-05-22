@@ -34,7 +34,7 @@ final class PlanetPresenter: PlanetPresentationLogic {
         viewController?.showError(error)
     }
 
-    // MARK: Do something
+    // MARK: - Do something
 
     func presentPlanets(response: Planet.FetchPlanets.Response) {
         guard let planetsResponse = response.planets else { return  }
